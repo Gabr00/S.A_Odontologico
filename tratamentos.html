@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleIndex.css">
+    <title>Menu</title>
+    <!-- <link rel="stylesheet" href="StyleIndex.css"> -->
+    <style>
+        img.logo {
+            width: 350px; /* Defina o tamanho desejado para a logo */
+            height: auto;  /* Mantém a proporção da imagem */
+            position: absolute;
+            top: 10px;  /* Ajusta a distância do topo */
+            left: 10px; /* Ajusta a distância da esquerda */
+        }
+        /* From Uiverse.io by Yaya12085 */ 
+.radio-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  background-color: #EEE;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: 300px;
+  font-size: 14px;
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: .5rem 0;
+  color: rgba(51, 65, 85, 1);
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #2fb195;
+  font-weight: 600;
+}
+    </style>
+</head>
+
+<body>
+    <!-- <center><h1>INDEX</h1></center> -->
+    <div>
+        <img src="img/logo.png" class="logo" alt="Logo">
+<br>
+        <center> 
+          <div class="radio-input">
+            <input type="radio" id="opt1" name="option" onclick="window.location.href='home.html'" checked>
+            <label for="opt1">HOME</label>
+        
+            <input type="radio" id="opt2" name="option" onclick="window.location.href='aclinica.html'" checked>
+            <label for="opt2">A CLÍNICA</label>
+        
+            <input type="radio" id="opt3" name="option" onclick="window.location.href='tratamentos.html'" checked>
+            <label for="opt3">TRATAMENTOS</label>
+        
+            <input type="radio" id="opt4" name="option" onclick="window.location.href='blog.html'" checked>
+            <label for="opt4">BLOG</label>
+        
+            <input type="radio" id="opt5" name="option" onclick="window.location.href='contato.html'" checked>
+            <label for="opt5">CONTATO</label>
+        
+            <span class="selection"></span>
+          </div>
+        </center> 
+     
+    </div>
+<br>
+<p align="right">Seg à Sex das 08h00 às 12h00 | 14h00 às 19h00</p>
+
+    <hr>
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .filter {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .filter select {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 5px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        table th {
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+        }
+
+        table td input {
+            width: 90%;
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        select {
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        select option {
+            padding: 5px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .submit-btn {
+            width: 100%;
+            max-width: 400px;
+            padding: 16px 30px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            color: #333;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #80eb72;
+        }
+
+        img.logo {
+            width: 350px;
+            height: auto;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .centraliza {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        .menu {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000000;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            margin: 20px auto;
+            padding: 0;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        .menu .link {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .menu .link::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #2fb195;
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .menu .link svg {
+            width: 14px;
+            height: 14px;
+            fill: #000000;
+            transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .menu .item {
+            position: relative;
+        }
+
+        .menu .item .submenu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            border-radius: 0 0 16px 16px;
+            width: 200px;
+            overflow: hidden;
+            border: 1px solid #cccccc;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-12px);
+            transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+            z-index: 1;
+            pointer-events: none;
+            background-color: #ffffff;
+        }
+
+        .menu .item:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+            border-top: transparent;
+            border-color: #2fb195;
+        }
+
+        .menu .item:hover .link {
+            color: #ffffff;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .menu .item:hover .link::after {
+            transform: scaleX(1);
+            transform-origin: right;
+        }
+
+        .menu .item:hover .link svg {
+            fill: #ffffff;
+            transform: rotate(-180deg);
+        }
+
+        .submenu .submenu-item {
+            width: 100%;
+            transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .submenu .submenu-link {
+            display: block;
+            padding: 12px 24px;
+            width: 100%;
+            position: relative;
+            text-align: left;
+            transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .submenu .submenu-link::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scaleX(0);
+            width: 100%;
+            height: 100%;
+            background-color: #5ec5af;
+            z-index: -1;
+            transform-origin: left;
+            transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .submenu .submenu-link:hover:before {
+            transform: scaleX(1);
+            transform-origin: right;
+        }
+
+        .submenu .submenu-link:hover {
+            color: #ffffff;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(378px, 1fr));
+            grid-gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .grid-item p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="https://www.uniodonto-rs.com.br/storage/app/arquivos/upload111/dentista-foto-freepik.jpg" alt="Limpeza Dentária">
+            <p>LIMPEZA DENTÁRIA</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.clinicadavilla.com.br/wp-content/uploads/2021/02/clareamento-dental-1-700x438.jpg" alt="Clareamento Dental">
+            <p>CLAREAMENTO DENTAL</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://clinicaodontomania.com.br/wp-content/uploads/2021/05/depositphotos_308129356_xl-2015-1-1-1024x1024.jpg" alt="Tratamento de Canal">
+            <p>TRATAMENTO DE CANAL</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.implantomed.com.br/wp-content/uploads/2015/05/o-que-e-implante-dentario-1024x675.jpg.webp" alt="Implante Dentário">
+            <p>IMPLANTE DENTÁRIO</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://ipfinstituto.com/wp-content/uploads/2021/12/1690994567172.webp" alt="Ortodontia">
+            <p>ORTODONTIA</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://eapgoias.com.br/wp-content/uploads/2023/05/tecnologia-na-odontologia-1536x1024.jpg" alt="Próteses Dentárias">
+            <p>PRÓTESES DENTÁRIAS</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.clinicorp.com/wp-content/uploads/2024/06/image-8-1.jpeg" alt="Odontopediatria">
+            <p>ODONTOPEDIATRIA</p>
+        </div>
+    </div>
+</body>
+</html>
+
+        </div>
+ 
+            
+    </header>
+
+    <section class="main-content">
+        
+        
+    </section>
+</body>
+</html>

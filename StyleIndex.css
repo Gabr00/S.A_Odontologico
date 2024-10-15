@@ -1,0 +1,144 @@
+
+.button2 {
+    display: inline-block;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  }
+  
+  .button2:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  }
+  
+  .button2:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button2:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #2fb195;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button2:hover {
+    color: #ffffff;
+    border: 1px solid #2fb195;
+  }
+  
+  .button2:hover:before {
+    top: -35%;
+    background-color: #2fb195;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  .button2:hover:after {
+    top: -45%;
+    background-color: #2fb195;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+
+  body{
+    font-family: helvetica;
+}
+ 
+/* Estilo dos botões */
+    .radio-input input {
+      display: none;
+    }
+
+    .radio-input {
+      --container_width: 500px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      background-color: #fff;
+      color: #2fb195;
+      width: var(--container_width);
+      overflow: hidden;
+      border: 1px solid rgba(53, 52, 52, 0.226);
+    }
+
+    .radio-input label {
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      font-weight: 600;
+      letter-spacing: -1px;
+      font-size: 14px;
+    }
+
+    .selection {
+      display: none;
+      position: absolute;
+      height: 100%;
+      width: calc(var(--container_width) / 5);
+      z-index: 0;
+      left: 0;
+      top: 0;
+      transition: .15s ease;
+    }
+
+    /* Adicionando cor para o texto e fundo do botão selecionado */
+    .radio-input label:has(input:checked) {
+      color: #fff;
+    }
+
+    .radio-input label:has(input:checked) ~ .selection {
+      background-color: #2fb195;
+      display: inline-block;
+    }
+
+    .radio-input label:nth-child(1):has(input:checked) ~ .selection {
+      transform: translateX(calc(var(--container_width) * 0/5));
+    }
+
+    .radio-input label:nth-child(2):has(input:checked) ~ .selection {
+      transform: translateX(calc(var(--container_width) * 1/5));
+    }
+
+    .radio-input label:nth-child(3):has(input:checked) ~ .selection {
+      transform: translateX(calc(var(--container_width) * 2/5));
+    }
+
+    .radio-input label:nth-child(4):has(input:checked) ~ .selection {
+      transform: translateX(calc(var(--container_width) * 3/5));
+    }
+
+    .radio-input label:nth-child(5):has(input:checked) ~ .selection {
+      transform: translateX(calc(var(--container_width) * 4/5));
+    }
