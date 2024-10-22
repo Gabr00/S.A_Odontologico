@@ -14,45 +14,70 @@
             top: 10px;  /* Ajusta a distância do topo */
             left: 10px; /* Ajusta a distância da esquerda */
         }
-        /* From Uiverse.io by Yaya12085 */ 
-.radio-inputs {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 0.5rem;
-  background-color: #EEE;
-  box-sizing: border-box;
-  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
-  padding: 0.25rem;
-  width: 300px;
-  font-size: 14px;
+        .card {
+    position: relative;
+    width: 360px; /* A largura maior ainda é mantida */
+    height: 370px; /* A altura maior ainda é mantida */
+    border-radius: 14px;
+    z-index: 1111;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    justify-content: center;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    padding: 20px;
+    margin-left: 85px; /* Aumentado para mover mais para a direita */
+    margin-top: 40px; /* Espaçamento superior */
 }
 
-.radio-inputs .radio {
-  flex: 1 1 auto;
-  text-align: center;
+/* O restante do CSS permanece o mesmo */
+.bg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px); 
+    height: calc(100% - 10px);
+    z-index: 2;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid white;
 }
 
-.radio-inputs .radio input {
-  display: none;
+.blob {
+    position: absolute;
+    z-index: 1;
+    top: -50px; /* Coloca o blob acima do topo da tabela */
+    left: -50px; /* Coloca o blob à esquerda */
+    width: 700px; /* Faz o blob maior para rodear toda a tabela */
+    height: 600px; /* Aumenta a altura do blob */
+    border-radius: 50%; /* Deixa o blob circular */
+    background-color: #2fb195;
+    opacity: 0.6; /* Diminui a opacidade para um efeito mais sutil */
+    filter: blur(40px); /* Aumenta o blur para suavizar as bordas */
+    animation: blob-bounce 5s infinite ease;
 }
 
-.radio-inputs .radio .name {
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  border: none;
-  padding: .5rem 0;
-  color: rgba(51, 65, 85, 1);
-  transition: all .15s ease-in-out;
+@keyframes blob-bounce {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    25% {
+        transform: translate3d(10px, 0, 0);
+    }
+    50% {
+        transform: translate3d(10px, 10px, 0);
+    }
+    75% {
+        transform: translate3d(0, 10px, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
 }
 
-.radio-inputs .radio input:checked + .name {
-  background-color: #2fb195;
-  font-weight: 600;
-}
     </style>
 </head>
 
@@ -88,30 +113,34 @@
 
     <hr>
     <header>
-        <div style="text-align: center; margin-left: 0; max-width: 400px;">
-            <p><h1>VENHA SORRIR COM A GENTE</h1>
-                Temos uma equipe de especialistas<br>
-                    altamente qualificados para atendê-los<br>
-                    com qualidade e excelência.</p>
-              
-
-            <p><h4>ATENDIMENTO COMPLETO E 
-                FÁCIL ACESSO</h4>
-        
-            Clínica localizada na região central de<br>
-            Joinville.<br>
-            faça o procedimento completo conosco<br>
-            em um só lugar com total qualidade e execelência<br>
-                             serviço.</p>
-                
+      <div class="card">
+        <div class="blob"></div> <!-- Blob animado atrás do conteúdo -->
+        <div class="bg"> <!-- Fundo com o efeito de blur -->
+          <div style="text-align: center; margin-left: 0; max-width: 400px; z-index: 3; position: relative;">
+            <h1>VENHA SORRIR COM A GENTE</h1>
+            <p>Temos uma equipe de especialistas<br>
+              altamente qualificados para atendê-los<br>
+              com qualidade e excelência.</p>
+    
+            <br> <!-- Adicionado para criar um pequeno espaçamento entre os dois blocos de texto -->
+    
+            <h4>ATENDIMENTO COMPLETO E FÁCIL ACESSO</h4>
+            <p> 
+              Clínica localizada na região central de<br>
+              Joinville.<br>
+              Faça o procedimento completo conosco<br>
+              em um só lugar com total qualidade e excelência<br>
+              de serviço.
+            </p>
+          </div>
         </div>
- 
-            
+      </div>
     </header>
-
+    <div style="display: flex; justify-content: center; align-items: flex-start; height: 100px;">
+      <img src="img/Equipe.jpeg" class="equipe" alt="Equipe" style="margin-top: -380px; margin-left: 400px; width:500px; height: auto;">
+  </div>
+  
     <section class="main-content">
-        
-        
     </section>
 </body>
 </html>
