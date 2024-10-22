@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleIndex.css">
+    <title>Menu</title>
+    <style>
+        img.logo {
+            width: 350px; /* Defina o tamanho desejado para a logo */
+            height: auto;  /* Mantém a proporção da imagem */
+            position: absolute;
+            top: 10px;  /* Ajusta a distância do topo */
+            left: 10px; /* Ajusta a distância da esquerda */
+        }
+
+        /* Estilo dos blocos de contato */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: flex-start; /* Alinha no topo */
+            padding-top: 20px; /* Reduz o espaço do topo */
+            position: relative; /* Para ajustar o posicionamento do blob */
+            z-index: 2; /* Certifica que os blocos ficam na frente */
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: center; /* Alinha verticalmente os itens no Flexbox */
+            justify-content: center; /* Alinha horizontalmente dentro do flex */
+        }
+
+        .grid-item {
+            background-color: #f1f1f1;
+            padding: 10px; /* Reduz o padding */
+            border-radius: 8px;
+            display: flex;
+            justify-content: center; /* Centraliza o conteúdo */
+            align-items: center; /* Centraliza o conteúdo */
+            z-index: 3; /* Certifica que os blocos ficam na frente do blob */
+        }
+
+        /* Reduz a margem inferior dos parágrafos para aproximar os tópicos */
+        .grid-item p {
+            margin-bottom: 2px; /* Reduz o espaçamento entre as linhas */
+        }
+
+        /* Reduz ainda mais o espaço entre o endereço, telefone e horário */
+        .contact-block {
+            margin-bottom: 10px; /* Ajusta o espaço entre os blocos */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="img/logo.png" class="logo" alt="Logo">
+    </div>
+
+    <br>
+    <center> 
+      <div class="radio-input">
+        <input type="radio" id="opt1" name="option" onclick="window.location.href='home.html'" checked>
+        <label for="opt1">HOME</label>
+
+        <input type="radio" id="opt2" name="option" onclick="window.location.href='aclinica.html'" checked>
+        <label for="opt2">A CLÍNICA</label>
+
+        <input type="radio" id="opt3" name="option" onclick="window.location.href='tratamentos.html'" checked>
+        <label for="opt3">TRATAMENTOS</label>
+
+        <input type="radio" id="opt4" name="option" onclick="window.location.href='blog.html'" checked>
+        <label for="opt4">BLOG</label>
+
+        <input type="radio" id="opt5" name="option" onclick="window.location.href='contato.html'" checked>
+        <label for="opt5">CONTATO</label>
+      </div>
+    </center>
+
+    <br>
+    <p align="right">Seg à Sex das 08h00 às 12h00 | 14h00 às 19h00</p>
+
+    <hr>
+
+    <header>
+        <div style="display: flex; justify-content: center;">
+            <h1>Nossos Contatos</h1>
+          </div>
+
+        <!-- Animação de blob por trás dos contatos -->
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+        </div>
+
+        <!-- Bloco do Endereço -->
+        <div class="grid-container">
+            <div class="grid-item contact-block">
+                <div class="flex-container">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3722/3722049.png" style="width: 50px; margin-right: 10px;">
+                    <div>
+                        <p>Rua Henrique Meyer, 216 - Centro</p>
+                        <p>Joinville - SC</p>
+                        <p>Cep: 89205-405</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloco do Telefone -->
+            <div class="grid-item contact-block">
+                <div class="flex-container">
+                    <img src="https://cdn-icons-png.flaticon.com/512/126/126341.png" style="width: 50px; margin-right: 10px;">
+                    <div>
+                        <p>Telefones: (47) 3804-6465</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloco do Horário -->
+            <div class="grid-item contact-block">
+                <div class="flex-container">
+                    <img src="https://e7.pngegg.com/pngimages/474/145/png-clipart-computer-icons-time-zone-time-time-circular.png" style="width: 50px; margin-right: 10px;">
+                    <div>
+                        <p>Horário de Funcionamento:</p>
+                        <p>Seg - Sex: 08:00 às 12:00 / 14:00 às 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

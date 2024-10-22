@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleIndex.css">
+    <title>Menu</title>
+    <!-- <link rel="stylesheet" href="StyleIndex.css"> -->
+    <style>
+        img.logo {
+            width: 350px; /* Defina o tamanho desejado para a logo */
+            height: auto;  /* Mantém a proporção da imagem */
+            position: absolute;
+            top: 10px;  /* Ajusta a distância do topo */
+            left: 10px; /* Ajusta a distância da esquerda */
+        }
+        .card {
+    position: relative;
+    width: 360px; /* A largura maior ainda é mantida */
+    height: 370px; /* A altura maior ainda é mantida */
+    border-radius: 14px;
+    z-index: 1111;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    justify-content: center;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    padding: 20px;
+    margin-left: 85px; /* Aumentado para mover mais para a direita */
+    margin-top: 40px; /* Espaçamento superior */
+}
+
+/* O restante do CSS permanece o mesmo */
+.bg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px); 
+    height: calc(100% - 10px);
+    z-index: 2;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid white;
+}
+
+.blob {
+    position: absolute;
+    z-index: 1;
+    top: -50px; /* Coloca o blob acima do topo da tabela */
+    left: -50px; /* Coloca o blob à esquerda */
+    width: 700px; /* Faz o blob maior para rodear toda a tabela */
+    height: 600px; /* Aumenta a altura do blob */
+    border-radius: 50%; /* Deixa o blob circular */
+    background-color: #2fb195;
+    opacity: 0.6; /* Diminui a opacidade para um efeito mais sutil */
+    filter: blur(40px); /* Aumenta o blur para suavizar as bordas */
+    animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    25% {
+        transform: translate3d(10px, 0, 0);
+    }
+    50% {
+        transform: translate3d(10px, 10px, 0);
+    }
+    75% {
+        transform: translate3d(0, 10px, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- <center><h1>INDEX</h1></center> -->
+    <div>
+        <img src="img/logo.png" class="logo" alt="Logo">
+<br>
+        <center> 
+          <div class="radio-input">
+            <input type="radio" id="opt1" name="option" onclick="window.location.href='home.html'" checked>
+            <label for="opt1">HOME</label>
+        
+            <input type="radio" id="opt2" name="option" onclick="window.location.href='aclinica.html'" checked>
+            <label for="opt2">A CLÍNICA</label>
+        
+            <input type="radio" id="opt3" name="option" onclick="window.location.href='tratamentos.html'" checked>
+            <label for="opt3">TRATAMENTOS</label>
+        
+            <input type="radio" id="opt4" name="option" onclick="window.location.href='blog.html'" checked>
+            <label for="opt4">BLOG</label>
+        
+            <input type="radio" id="opt5" name="option" onclick="window.location.href='contato.html'" checked>
+            <label for="opt5">CONTATO</label>
+        
+            <span class="selection"></span>
+          </div>
+        </center> 
+     
+    </div>
+<br>
+<p align="right">Seg à Sex das 08h00 às 12h00 | 14h00 às 19h00</p>
+
+    <hr>
+    <header>
+      <div class="card">
+        <div class="blob"></div> <!-- Blob animado atrás do conteúdo -->
+        <div class="bg"> <!-- Fundo com o efeito de blur -->
+          <div style="text-align: center; margin-left: 0; max-width: 400px; z-index: 3; position: relative;">
+            <h1>VENHA SORRIR COM A GENTE</h1>
+            <p>Temos uma equipe de especialistas<br>
+              altamente qualificados para atendê-los<br>
+              com qualidade e excelência.</p>
+    
+            <br> <!-- Adicionado para criar um pequeno espaçamento entre os dois blocos de texto -->
+    
+            <h4>ATENDIMENTO COMPLETO E FÁCIL ACESSO</h4>
+            <p> 
+              Clínica localizada na região central de<br>
+              Joinville.<br>
+              Faça o procedimento completo conosco<br>
+              em um só lugar com total qualidade e excelência<br>
+              de serviço.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div style="display: flex; justify-content: center; align-items: flex-start; height: 100px;">
+      <img src="img/Equipe.jpeg" class="equipe" alt="Equipe" style="margin-top: -380px; margin-left: 400px; width:500px; height: auto;">
+  </div>
+  
+    <section class="main-content">
+    </section>
+</body>
+</html>
